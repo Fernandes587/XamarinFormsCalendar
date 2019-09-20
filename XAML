@@ -1,0 +1,216 @@
+XAML CODE
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Cronograma"
+             x:Class="XXX.XXX">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="plainButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#eee"/>
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="FontSize" Value="19" />
+            </Style>
+            <Style x:Key="darkerButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#ddd"/>
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+            <Style x:Key="orangeButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#eee"/>
+                <Setter Property="TextColor" Value="Gray" />
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="FontSize" Value="19" />
+            </Style>
+            <Style x:Key="Vermelin" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#eee"/>
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="FontSize" Value="19" />
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid x:Name="controlGrid" RowSpacing="1" ColumnSpacing="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Outubro 2019" 
+                   Grid.Row="0" 
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center" 
+                   TextColor="Black"
+                   FontSize="30" 
+                   Grid.ColumnSpan="7" />
+
+
+
+            <Button Text = "Dom" Grid.Row="1" Grid.Column="0"
+         Style="{StaticResource darkerButton}" />
+
+            <Button Text = "Seg" Grid.Row="1" Grid.Column="1"
+        Style="{StaticResource darkerButton}" />
+
+            <Button Text = "Ter" Grid.Row="1" Grid.Column="2"
+        Style="{StaticResource darkerButton}" />
+
+            <Button Text = "Qua" Grid.Row="1" Grid.Column="3"
+        Style="{StaticResource darkerButton}" />
+
+            <Button Text = "Qui" Grid.Row="1" Grid.Column="4"
+        Style="{StaticResource darkerButton}" />
+
+            <Button Text = "Sex" Grid.Row="1" Grid.Column="5"
+        Style="{StaticResource darkerButton}" />
+
+            <Button Text = "Sab" Grid.Row="1" Grid.Column="6"
+        Style="{StaticResource darkerButton}" />
+
+
+
+
+            <Button Text = "29" Grid.Row="2" Grid.Column="0"
+         Style="{StaticResource orangeButton}" Clicked="Dia_Livre" />
+
+            <Button Text = "30" Grid.Row="2" Grid.Column="1"
+        Style="{StaticResource orangeButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "1" Grid.Row="2" Grid.Column="2"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "2" Grid.Row="2" Grid.Column="3"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "3" Grid.Row="2" Grid.Column="4"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "4" Grid.Row="2" Grid.Column="5"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "5" Grid.Row="2" Grid.Column="6"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+
+
+            <Button Text = "6" Grid.Row="3" Grid.Column="0"
+         Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "7" Grid.Row="3" Grid.Column="1"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "8" Grid.Row="3" Grid.Column="2"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "9" Grid.Row="3" Grid.Column="3"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "10" Grid.Row="3" Grid.Column="4"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "11" Grid.Row="3" Grid.Column="5"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "12" Grid.Row="3" Grid.Column="6"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+
+
+
+            <Button Text = "13" Grid.Row="4" Grid.Column="0"
+         Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "14" Grid.Row="4" Grid.Column="1"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "15" Grid.Row="4" Grid.Column="2"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "16" Grid.Row="4" Grid.Column="3"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "17" Grid.Row="4" Grid.Column="4"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "18" Grid.Row="4" Grid.Column="5"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "19" Grid.Row="4" Grid.Column="6"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+
+
+            <Button Text = "20" Grid.Row="5" Grid.Column="0"
+         Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "21" Grid.Row="5" Grid.Column="1"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "22" Grid.Row="5" Grid.Column="2"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "23" Grid.Row="5" Grid.Column="3"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "24" Grid.Row="5" Grid.Column="4"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "25" Grid.Row="5" Grid.Column="5"
+        Style="{StaticResource Vermelin}" Clicked="PopEvento_25" />
+
+            <Button Text = "26" Grid.Row="5" Grid.Column="6"
+        Style="{StaticResource Vermelin}" Clicked="PopEvento_26"/>
+
+
+            <Button Text = "27" Grid.Row="6" Grid.Column="0"
+         Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "28" Grid.Row="6" Grid.Column="1"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "29" Grid.Row="6" Grid.Column="2"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "30" Grid.Row="6" Grid.Column="3"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "31" Grid.Row="6" Grid.Column="4"
+        Style="{StaticResource plainButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "1" Grid.Row="6" Grid.Column="5"
+        Style="{StaticResource orangeButton}" Clicked="Dia_Livre"/>
+
+            <Button Text = "2" Grid.Row="6" Grid.Column="6"
+        Style="{StaticResource orangeButton}" Clicked="Dia_Livre"/>
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
